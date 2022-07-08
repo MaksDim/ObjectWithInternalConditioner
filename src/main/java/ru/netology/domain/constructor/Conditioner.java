@@ -8,6 +8,14 @@ public class Conditioner {
     private int currentTemperature = calculateCurrentTemp();
     private boolean on;
 
+    public Conditioner(int currentTemperature, boolean on) {
+        this.currentTemperature = currentTemperature;
+        this.on = on;
+    }
+
+    public  Conditioner() {}
+
+
     public Conditioner(int id, String name, int maxTemperature, int minTemperature, int currentTemperature, boolean on) {
         this.id = id;
         this.name = name;
@@ -18,7 +26,7 @@ public class Conditioner {
     }
 
     //All args constructor
-    //No args
+    //No args constructor
 
     private int calculateCurrentTemp() {
         return (maxTemperature + minTemperature) / 2;
